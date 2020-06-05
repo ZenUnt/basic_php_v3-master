@@ -1,3 +1,16 @@
+<?php
+
+$n = mt_rand(1, 3);
+
+if ($n === 1) {
+  $message = 'UI/UXデザイナー見習いです';
+} else if ($n === 2) {
+  $message = 'プログラミング勉強中です';
+} else {
+  $message = 'PHP ちょっとわかります';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,10 +25,11 @@
     <div class="container">
       <div class="icon">
         <img src="img/taro.png" width="120" height="120" alt="太郎のアイコンです">
+        
       </div>
       <div class="info">
         <h1>山田太郎</h1>
-        <p>UI/UXデザイナー見習いです</p>
+        <p><?= $message; ?></p>
         <ul>
           <li>
             <a href="https://dotinstall.com" target="_blank">
